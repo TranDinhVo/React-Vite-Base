@@ -1,4 +1,4 @@
-ul {
+/* ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ li a {
 }
 li a:hover:not(.active) {
   background-color: #111;
-}
+} */
 .active {
   background-color: #04aa6d;
 }

@@ -5,10 +5,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import UserPage from "./pages/UserPage";
-import ProductPage from "./pages/BookPage/index.jsx";
 import "./styles/global.css";
 import Todo from "./components/Todo/index.jsx";
 import Error from "./pages/Error";
+import { AuthWrapper } from "./components/context/auth.context.jsx";
+import PrivateRoute from "./pages/PrivateRoute/index.jsx";
+import BookPage from "./pages/BookPage/index.jsx";
+import "nprogress/nprogress.css";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,7 +28,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/book",
-        element: <ProductPage />,
+        element: (
+          <PrivateRoute>
+            <BookPage />,
+          </PrivateRoute>
+        ),
       },
     ],
   },
@@ -39,8 +46,7 @@ const router = createBrowserRouter([
   },
 ]);
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    {/* <App /> */}
+  <AuthWrapper>
     <RouterProvider router={router} />
-  </StrictMode>
+  </AuthWrapper>
 );

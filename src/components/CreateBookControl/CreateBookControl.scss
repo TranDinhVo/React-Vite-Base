@@ -1,0 +1,42 @@
+.book-form {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__thumbnail {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    label {
+      span {
+        background-color: orange;
+        padding: 8px 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        line-height: 0;
+        cursor: pointer;
+      }
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    .ant-input-number {
+      width: 100%;
+    }
+    input {
+      flex: 1;
+    }
+  }
+  &__preview {
+    margin-top: 20px;
+    width: 250px;
+    border: 1px solid #ddd;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

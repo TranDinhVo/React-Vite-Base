@@ -1,0 +1,24 @@
+.user-form {
+  &__list {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .css-dev-only-do-not-override-zg0ahe {
+      margin: 0;
+    }
+    .ant-input-password {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    input {
+      margin: 5px 0 10px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

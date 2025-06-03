@@ -1,0 +1,14 @@
+.book {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 30px 50px;
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__table {
+    margin-top: 20px;
+  }
+}

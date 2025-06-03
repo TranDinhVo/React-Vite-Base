@@ -1,4 +1,12 @@
+import BookTable from "../../components/BookTable";
+import "./BookPage.scss";
 const BookPage = () => {
-  return <>BookPage </>;
+  return (
+    <>
+      <div className="book">
+        <BookTable />
+      </div>
+    </>
+  );
 };
 export default BookPage;
